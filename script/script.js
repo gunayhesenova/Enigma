@@ -319,15 +319,15 @@ $('.workimg img').eq(5).hover(function(){
 
 
 var comphotowid=$('.comphoto').width()
-setInterval(function(){
-	if(comphotowid==4035){
+var set7=setInterval(function(){
+	if(comphotowid==4047){
 	comphotowid=0
 }
-if(comphotowid==1345){
+if(comphotowid==1349){
 	$('.slidedisk').removeClass('active1')
 	$('.slidedisk').eq(1).addClass('active1')
 }
-if(comphotowid==2690){
+if(comphotowid==2698){
 	$('.slidedisk').removeClass('active1')
 	$('.slidedisk').eq(2).addClass('active1')
 }
@@ -339,7 +339,7 @@ $('.rotate').css({
 	transform: 'translate(-'+comphotowid+'px)',
 	transition:'1s all ease'
 });
-comphotowid+=1345
+comphotowid+=1349
 console.log(comphotowid)
 },2000)
 
@@ -347,3 +347,28 @@ console.log(comphotowid)
 
 
 
+t=0
+$('.slidedisk').click(function() {
+	clearInterval(set7)
+	$('.slidedisk').removeClass('active1')
+	$(this).addClass('active1')
+});
+
+$('.slidedisk').eq(0).click(function(event) {
+	$('.rotate').css({
+	transform: 'translate(0)',
+	transition:'1s all ease'
+});
+});
+$('.slidedisk').eq(1).click(function(event) {
+	$('.rotate').css({
+	transform: 'translate(-1349px)',
+	transition:'1s all ease'
+});
+});
+$('.slidedisk').eq(2).click(function(event) {
+	$('.rotate').css({
+	transform: 'translate(-2698px)',
+	transition:'1s all ease'
+});
+});
