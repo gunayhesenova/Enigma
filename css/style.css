@@ -319,7 +319,8 @@ ul{
 	background: url('../img/20.jpg');
 	background-size: cover;
 	background-attachment: fixed;
-	height: 620px
+	height: 620px;
+	width: 1345px;
 }
 .slidedisk{
 	border-radius: 50%;
@@ -446,4 +447,7 @@ a:hover{
 }
 .slide1{
 	width:609px;
+}
+.compphotoover{
+	width: 4043px
 }

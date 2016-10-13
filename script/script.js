@@ -82,7 +82,7 @@ setInterval(func,2000)
 
 
 $(window).scroll(function() {
-	console.log($(window).scrollTop())
+	// console.log($(window).scrollTop())
 	for (var i = 0; i < $('section').length;i++) {
 		var ofset =$('section').eq(i).offset().top
 		var height=$('section').eq(i).height()
@@ -314,6 +314,34 @@ $('.workimg img').eq(5).hover(function(){
 })
 
 
+
+
+
+
+var comphotowid=$('.comphoto').width()
+setInterval(function(){
+	if(comphotowid==4035){
+	comphotowid=0
+}
+if(comphotowid==1345){
+	$('.slidedisk').removeClass('active1')
+	$('.slidedisk').eq(1).addClass('active1')
+}
+if(comphotowid==2690){
+	$('.slidedisk').removeClass('active1')
+	$('.slidedisk').eq(2).addClass('active1')
+}
+if(comphotowid==0){
+	$('.slidedisk').removeClass('active1')
+	$('.slidedisk').eq(0).addClass('active1')
+}
+$('.rotate').css({
+	transform: 'translate(-'+comphotowid+'px)',
+	transition:'1s all ease'
+});
+comphotowid+=1345
+console.log(comphotowid)
+},2000)
 
 
 
