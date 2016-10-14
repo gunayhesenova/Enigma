@@ -451,3 +451,7 @@ a:hover{
 .compphotoover{
 	width: 4055px
 }
+.learn:hover,.purchase:hover{
+	transition: 1s all ease;
+	background: #bfa67a
+}
